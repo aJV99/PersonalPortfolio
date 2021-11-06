@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Abbas Alibhai</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="icon.png"/>
+    <link rel="stylesheet" href="reset.css" type="text/css" />
+    <link rel="stylesheet" href="indexStyle.css" type="text/css" />
+    <!-- Icon Library  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- LOGO AND NAV -->
+    <header>
+        <hgroup>
+            <nav class="nav">
+                <ul class="logo">
+                    <label class="navlogo" href="#">Abbas <span style="color:#007ACC;">Alibhai</span></label>
+                </ul>
+                <ul class="navigation">
+                    <li><a class="navlink" href="index.html#Home">Home</a></li>
+                    <li><a class="navlink" href="index.html#AboutMe">About Me</a></li>
+                    <li><a class="navlink" href="index.html#Skills">Skills</a></li>
+                    <li><a class="navlink" href="experience.html#Experience">Experience</a></li>
+                    <li><a class="navlink" href="experience.html#Education">Education</a></li>
+                    <li><a class="navlink" href="experience.html#Projects">Projects</a></li>
+                    <li><a class="navlink" href="login.php">Blog</a></li>
+                    <li><a class="navlink" href="index.html#Contacts">Contact</a></li>
+                </ul>
+            </nav>
+        </hgroup>
+    </header>
+
+    <!-- RETURN TO TOP BUTTON -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+    <script>
+        // Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    <!-- HOME SECTION -->
+    <section>
+        <table class="homepage" id="Home">
+            <tr>
+                <td>
+                    <section class="home" id="home">
+                        <div class="max-width">
+                            <div class="home-content">
+                                <div class="text-1">
+                                    Hello, my name is</div>
+                                <div class="text-2">
+                                    Abbas Alibhai</div>
+                                <div class="text-3">
+                                    And I'm a <span class="typeText"></span></div>
+                                <a href="#Contacts">Hire me</a>
+                                <script>
+                                    var typeText = document.querySelector(".typeText")
+                                    var textToBeTyped = "computer scientist"
+                                    var textToBeTypedArr = ["computer scientist", "programmer", "web developer",
+                                        "video editor"
+                                    ]
+                                    var index = 0,
+                                        isAdding = true,
+                                        textToBeTypedIndex = 0
+
+                                    function playAnim() {
+                                        setTimeout(function () {
+                                            // set the text of typeText to a substring of the text to be typed using index.
+                                            typeText.innerText = textToBeTypedArr[textToBeTypedIndex].slice(0,
+                                                index)
+                                            if (isAdding) {
+                                                // adding text
+                                                if (index > textToBeTypedArr[textToBeTypedIndex].length) {
+                                                    // no more text to add
+                                                    isAdding = false
+                                                    //break: wait 2s before playing again
+                                                    setTimeout(function () {
+                                                        playAnim()
+                                                    }, 2000)
+                                                    return
+                                                } else {
+                                                    // increment index by 1
+                                                    index++
+                                                }
+                                            } else {
+                                                // removing text
+                                                if (index === 0) {
+                                                    // no more text to remove
+                                                    isAdding = true
+                                                    //switch to next text in text array
+                                                    textToBeTypedIndex = (textToBeTypedIndex + 1) %
+                                                        textToBeTypedArr
+                                                        .length
+                                                } else {
+                                                    // decrement index by 1
+                                                    index--
+                                                }
+                                            }
+                                            // call itself
+                                            playAnim()
+                                        }, isAdding ? 120 : 60)
+                                    }
+                                    // start animation
+                                    playAnim()
+                                </script>
+                            </div>
+                        </div>
+                    </section>
+                </td>
+                <td class="picrow"><img src="homePic.jpg" height="400px" width="400px" class="mypic"></td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <div id="AboutMe"><br><br><br></div>
+    <section class="aboutme"><br><br><br>
+        <h2 class="title">About me</h2>
+        <table class="abouttable">
+            <tr>
+                <td class="colleft">
+                    <aside>
+                        <figure>
+                            <img src="aboutMePic.jpg" height="300px" width="300px" class="mypic2">
+                        </figure>
+                    </aside>
+                </td>
+                <td class="colright">
+                    <aside>
+                        <p>
+                            My name is <span style="color: #007ACC;">Abbas Alibhai</span>, I'm 18 years old and I am a
+                            first-year student at Queen Mary, University of London studying Computer Science with
+                            Industrial Experience. I am a talented, ambitious and hardworking individual, with broad
+                            skills and experience in programming, web developing, video editing and marketing.
+                            Furthermore, I am adept at handling multiple tasks on a daily basis competently and at
+                            working well under pressure. A key strength I have is communication as well as building
+                            strong relationships with people in order to deliver the best results.
+                        </p>
+                    </aside>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <div id="Skills"><br><br><br></div>
+    <section class="skills"><br><br><br>
+        <h2 class="title">My Skills</h2>
+        <table class="skillstable">
+            <tr>
+                <td class="colleft">
+                    <aside>
+                        <div style="width: 500px;">
+                            <div style="overflow: hidden;">
+                                <p class="progress-title">HTML</p>
+                                <p class="progress-title2">90%</p>
+                            </div>
+                            <span class="progress">
+                                <div class="progress-value" style="animation: load1 3s normal forwards;"></div>
+                            </span>
+                            <br><br>
+                            <div style="overflow: hidden;">
+                                <p class="progress-title">CSS</p>
+                                <p class="progress-title2">75%</p>
+                            </div>
+                            <span class="progress">
+                                <div class="progress-value" style="animation: load2 3s normal forwards;"></div>
+                            </span>
+                            <br><br>
+                            <div style="overflow: hidden;">
+                                <p class="progress-title">JavaScript</p>
+                                <p class="progress-title2">60%</p>
+                            </div>
+                            <span class="progress">
+                                <div class="progress-value" style="animation: load3 3s normal forwards;"></div>
+                            </span>
+                        </div>
+                    </aside>
+                </td>
+                <td class="colright">
+                    <aside>
+                        <div style="width: 500px;">
+                            <div style="overflow: hidden;">
+                                <p class="progress-title">Java Programming</p>
+                                <p class="progress-title2">80%</p>
+                            </div>
+                            <span class="progress">
+                                <div class="progress-value" style="animation: load4 3s normal forwards;"></div>
+                            </span>
+                            <br><br>
+                            <div style="overflow: hidden;">
+                                <p class="progress-title">PHP</p>
+                                <p class="progress-title2">70%</p>
+                            </div>
+                            <span class="progress">
+                                <div class="progress-value" style="animation: load5 3s normal forwards;"></div>
+                            </span>
+                            <br><br>
+                            <div style="overflow: hidden;">
+                                <p class="progress-title">MySQL</p>
+                                <p class="progress-title2">65%</p>
+                            </div>
+                            <span class="progress" style="margin-bottom: 50px;">
+                                <div class="progress-value" style="animation: load6 3s normal forwards;"></div>
+                            </span>
+                        </div>
+                    </aside>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <div id="Contacts"><br><br><br></div>
+    <section class="contacts"><br><br><br>
+        <h2 class="title">Contact Me</h2>
+        <table class="contacttable">
+            <tr>
+                <td class="colleft">
+                    <aside>
+                        <div class="contact-section">
+                            <div class="inner-width">
+                                <form action="#" method="post" id="sendmail">
+                                    <h3>Get in touch with me</h3>
+                                    <input type="text" class="name" placeholder="Your Name" id="inpName" required>
+                                    <input type="text" class="email" placeholder="Subject" id="inpSub" required>
+                                    <textarea rows="5" placeholder="Message" class="message" id="inpContent"></textarea>
+                                    <button type="button" id="btnSubmit" onclick="mailto()">Get in touch</button>
+                                </form>
+                            </div>
+                            <script>
+
+                                function mailto() {
+                                    var submit = document.getElementById("btnSubmit");
+                                    var name = document.getElementById("inpName");
+                                    var subject = document.getElementById("inpSub");
+                                    var content = document.getElementById("inpContent");
+                                    var email = "mailto: abbas.alibhai@gmail.com?subject=" + subject.value + " from " + name.value + "!&body=" + content.value;
+                                    window.location.href = email;
+                                }
+                            </script>
+                        </div>
+                    </aside>
+                </td>
+                <td class="colright">
+                    <aside>
+                        <p><b>Name</b></p>
+                        <p>Abbas Yusufali Alibhai</p>
+                        <br>
+                        <p><b>Email</b></p>
+                        <p><a href="mailto: abbas.alibhai@gmail.com">abbas.alibhai@gmail.com</a></p>
+                        <br>
+                        <p><b>Phone Number</b></p>
+                        <p><a href="tel: +44 7943 564146">+44 7943 564146</a></p>
+                        <p><a href="tel: +254 716 666429">+254 716 666429</a></p>
+                        <br>
+                        <p><b>Location</b></p>
+                        <p><a href="https://goo.gl/maps/urFXp5aiYP6Mueh46" target="_blank">London, United Kingdom</a>
+                        </p>
+                        <p><a href="https://goo.gl/maps/7GknFGMYzbZc16Ns8" target="_blank">Mombasa, Kenya</a></p>
+                        <br>
+                        <div class="icons">
+                            <ul>
+                                <li><a href="https://www.linkedin.com/in/abbas-alibhai/" target=”_blank”><i
+                                            class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                <li><a href="https://github.com/aJV99" target=”_blank”><i class="fa fa-github"
+                                            aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCaw50MkFMZJG_C5oUW3IcBg"
+                                        target=”_blank”><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.instagram.com/abbasalibhaiofficial/" target=”_blank”><i
+                                            class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </aside>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <small>Copyright &copy; 2021 Abbas Alibhai. All Rights Reserved</small>
+    </footer>
+
+
+</body>
+
+</html>

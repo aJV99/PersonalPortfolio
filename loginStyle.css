@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Varela+Round");
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+    background-color: #0F4870;
+    font-family: "Varela Round", sans-serif;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* NAVIGATION */
+.nav {
+    width: 100%;
+    background-color: #1c1d22;
+    z-index: 1;
+}
+
+.navigation {
+    list-style: none;
+    margin-left: 300px;
+    margin-bottom: -1000px;
+}
+
+.logocolor {
+    color: #007ACC;
+}
+
+.logo {
+    list-style: none;
+    padding: 30px 100px;
+    background-color: #1c1d22;
+}
+
+nav ul {
+    display: inline-block;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+.navlink {
+    display: block;
+    padding: 15px 0px;
+    text-decoration: none;
+    color: #f5f5f5;
+    margin: 10px 10px;
+    position: relative;
+    font-family: "Varela Round", sans-serif;
+}
+
+.navlink,
+.navlink:after,
+.navlink:before {
+    transition: all .5s;
+}
+
+.navlink:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #007ACC;
+    height: 2px;
+}
+
+.navlink:hover {
+    color: #007ACC;
+}
+
+.navlink:hover:after {
+    width: 100%;
+}
+
+.navlogo {
+    font-family: 'Ubuntu', sans-serif;
+    color: #f5f5f5;
+    font-size: 250%;
+}
+
+/* FORMS */
+
+
+table {
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+    margin-top: 2%;
+}
+
+.colleft {
+    width: 45%;
+}
+
+.colmiddle {
+    width: 0%;
+}
+
+.colright {
+    width: 45%;
+}
+
+form {
+    width: 450px;
+    min-height: 500px;
+    height: auto;
+    border-radius: 5px;
+    margin: 2% auto;
+    box-shadow: 0 9px 50px #007acc5b;
+    padding: 2%;
+    background-image: linear-gradient(-225deg, #007ACC 50%, #1c1d22 50%);
+    text-align: center;
+}
+
+form .con {
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    margin: 0 auto;
+}
+
+form header {
+    margin: 2% auto 10% auto;
+    text-align: center;
+}
+
+form header h2 {
+    font-size: 250%;
+    color: #f5f5f5;
+}
+
+form header p {
+    letter-spacing: 0.05em;
+    color: #f5f5f5;
+}
+
+.input-item {
+    background: #fff;
+    color: #333;
+    padding: 14.5px 0px 15px 9px;
+    border-radius: 5px;
+}
+
+.form-input {
+    width: 240px;
+    height: 25px;
+
+    margin-top: 2%;
+    padding: 15px;
+
+    font-size: 16px;
+    font-family: 'Abel', sans-serif;
+    color: #5E6472;
+
+    outline: none;
+    border: none;
+
+    border-radius: 5px;
+    transition: 0.2s linear;
+}
+
+.form-input2 {
+    width: 240px;
+    height: 25px;
+
+    margin-top: 2%;
+    margin-bottom: 10px;
+    padding: 15px;
+
+    font-size: 16px;
+    font-family: 'Abel', sans-serif;
+    color: #5E6472;
+
+    outline: none;
+    border: none;
+
+    border-radius: 5px;
+    transition: 0.2s linear;
+}
+
+.form-input3 {
+    width: 240px;
+    height: 25px;
+
+    margin-top: 2%;
+
+    padding: 15px;
+
+    font-size: 16px;
+    font-family: 'Abel', sans-serif;
+    color: #5E6472;
+
+    outline: none;
+    border: none;
+
+    border-radius: 5px;
+    transition: 0.2s linear;
+}
+
+.submit {
+    display: inline-block;
+    display: inline-block;
+    background: #007ACC;
+    color: #f5f5f5;
+    font-size: 25px;
+    padding: 0px 36px 12px;
+    border-radius: 6px;
+    border: 2px solid #f5f5f5;
+    transition: all 0.3s ease;
+    width: 280px;
+    height: 50px;
+    padding: 0 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s linear;
+    margin: 7% auto;
+    letter-spacing: 0.05em;
+}
+
+.submit:hover {
+    transform: translatey(3px);
+    box-shadow: none;
+    color: #007ACC;
+    background: none;
+}
+
+.submit:hover {
+    animation: ani9 0.4s ease-in-out infinite alternate;
+}
+
+.inputs {
+    margin-top: -25px;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 30px;
+    padding: 10px 20px;
+    text-align: right;
+    font-family: "Varela Round", sans-serif;
+    background-color: #1c1d22;
+}
+
+footer small {
+    color: #f5f5f5;
+}
