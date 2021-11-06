@@ -12,4 +12,4 @@ A personal portfolio website I made provides professional information about me a
 
 Author: *Abbas Alibhai*<br>
 Date: *4 May 2021*<br>
-Version: *1.7*
+Version: *1.23*
